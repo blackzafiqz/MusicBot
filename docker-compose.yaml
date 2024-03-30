@@ -1,0 +1,10 @@
+services:
+  jmusicbot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: JMusicBot
+    restart: unless-stopped
+    volumes:
+      - ./config.txt:/app/config.txt
+      - ./serversettings.json:/app/serversettings.json
